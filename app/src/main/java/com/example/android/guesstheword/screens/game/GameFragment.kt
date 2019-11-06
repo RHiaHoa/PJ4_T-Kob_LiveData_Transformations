@@ -66,8 +66,8 @@ class GameFragment : Fragment() {
             binding.wordText.text = newWord
         })
 
-        updateScoreText()
-        updateWordText()
+//        updateScoreText()
+//        updateWordText()
         return binding.root
     }
 
@@ -75,13 +75,13 @@ class GameFragment : Fragment() {
 
     private fun onSkip() {
         viewModel.onSkip()
-        updateWordText()
-        updateScoreText()
+//        updateWordText()
+//        updateScoreText()
     }
     private fun onCorrect() {
         viewModel.onCorrect()
-        updateScoreText()
-        updateWordText()
+//        updateScoreText()
+//        updateWordText()
     }
 
     private fun onEndGame() {
@@ -90,14 +90,14 @@ class GameFragment : Fragment() {
 
     /** Methods for updating the UI **/
 
-    private fun updateWordText() {
-        binding.wordText.text = viewModel.word.value
-
-    }
-
-    private fun updateScoreText() {
-        binding.scoreText.text = viewModel.score.toString()
-    }
+//    private fun updateWordText() {
+//        binding.wordText.text = viewModel._word.value
+//
+//    }
+//
+//    private fun updateScoreText() {
+//        binding.scoreText.text = viewModel._score.toString()d
+//    }
 
     /**
      * Called when the game is finished
