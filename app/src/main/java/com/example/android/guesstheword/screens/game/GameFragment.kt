@@ -70,6 +70,10 @@ class GameFragment : Fragment() {
             if (hasFinished) gameFinished()
         })
 
+        viewModel.score.observe(this, Observer { newScore ->
+            binding.scoreText.text = newScore.toString()
+        })
+
 //        updateScoreText()
 //        updateWordText()
         return binding.root
